@@ -3,8 +3,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "react-circular-progressbar/dist/styles.css";
 import Navbar from "../../commonComponents/NavBar";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import FacultyNavBar from "../../commonComponents/FacultyNavBar";
+import { useNavigate } from "react-router-dom";
 
 const FacultyDashboard = () => {
+  const navigate = useNavigate();
   const [createdQuizzes, setCreatedQuizzes] = useState([
     { title: "Quiz 6", description: "A short description of Quiz 6" },
     { title: "Quiz 7", description: "A short description of Quiz 7" },
@@ -25,7 +28,7 @@ const FacultyDashboard = () => {
 
   return (
     <div>
-      <Navbar />
+      <FacultyNavBar/>
       <div className="pt-14">
         {/* Faculty Dashboard Content */}
         <div className="container mx-auto p-8">
@@ -39,7 +42,7 @@ const FacultyDashboard = () => {
               Create New Quiz
             </h3>
             <div className="bg-white p-4 rounded shadow-md">
-              <button className="bg-indigo-500 text-white rounded px-4 py-2 hover:bg-indigo-600">
+              <button onClick={() => navigate('/createquiz')} className="bg-indigo-500 text-white rounded px-4 py-2 hover:bg-indigo-600">
                 Create Quiz
               </button>
             </div>

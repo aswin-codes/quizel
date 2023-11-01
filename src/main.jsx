@@ -7,6 +7,7 @@ import SignUp from './screens/Signup/SignupPage.jsx'
 import Login from './screens/login/LoginPage.jsx'
 import HomeScreen from './screens/HomeScreen/HomeScreen.jsx'
 import ActiveQuizzesScreen from './screens/ActiveQuiz/ActiveQuizScreen.jsx'
+import CreateQuizScreen from './screens/CreateQuiz/CreateQuizScreen.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/login' element={<Login/>}/>
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/active' element={<ActiveQuizzesScreen/>}/>
+        <Route path='/createquiz' element={<CreateQuizScreen/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
