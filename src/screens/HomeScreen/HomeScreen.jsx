@@ -3,7 +3,7 @@ import StudentDashboard from './StudemtDashBaord'
 import FacultyDashboard from './FacultyDashboard'
 
 const HomeScreen = () => {
-  const [isFaculty , setIsFaculty] = useState(true)
+  const [isFaculty , setIsFaculty] = useState(false)
   return (
     <div>{ isFaculty ? <FacultyDashboard/> : <StudentDashboard/>}</div>
   )

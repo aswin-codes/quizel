@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "../../commonComponents/NavBar";
+import { useNavigate } from "react-router-dom";
 
 const ActiveQuizzesScreen = () => {
+  const navigate= useNavigate();
   const [quizzes, setQuizzes] = useState([
     {
       title: "Math Quiz",
@@ -34,7 +36,7 @@ const ActiveQuizzesScreen = () => {
               <h2 className="text-lg font-semibold text-indigo-900">{quiz.title}</h2>
               <p className="text-sm text-indigo-600">{`Time Remaining: ${quiz.timeRemaining}`}</p>
             </div>
-            <button
+            <button onClick={() =>navigate('/attendquiz')}
               className="bg-indigo-500 w-full mt-2 md:w-auto md:mt-0 text-white px-4 py-2 rounded hover:bg-indigo-600"
               disabled={quiz.status !== "active"}
             >

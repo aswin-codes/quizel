@@ -17,23 +17,18 @@ const Navbar = () => {
             isOpen ? "bg-activebrown" : ""
           }`}
         >
-          <div className="cursor-pointer">
+          <div className="cursor-pointer" onClick={()=>navigate('/')}>
             <h1 className="text-2xl text-white font-semibold">QuizWiz</h1>
           </div>
           <div>
             <ul className="hidden lg:flex text-white gap-10 ">
-              <li>
+              <li onClick={() => navigate('/')}>
                 <span className="cursor-pointer ">Dashboard</span>
               </li>
               <li onClick={() => navigate('/active') }>
                 <span className="cursor-pointer ">Quizzes</span>
               </li>
-              <li>
-                <span className="cursor-pointer ">Results</span>
-              </li>
-              <li>
-                <span className="cursor-pointer ">Profiles</span>
-              </li>
+              
               
             </ul>
             <div className="lg:hidden">
@@ -81,18 +76,13 @@ const Navbar = () => {
         >
           <div className={`bg-activebrown   backdrop-opacity-5  `}>
             <ul className="flex-col px-5  text-white gap-10 ">
-              <li className="px-4 py-2 ">
+              <li className="px-4 py-2 " onClick={()=>navigate('/')}>
                 <p className="p-2 rounded-md hover:bg-indigo-300">Dashboard</p>
               </li>
               <li onClick={() => navigate('/active')} className="px-4 py-2 ">
                 <p className="p-2 rounded-md hover:bg-indigo-300">Quizzes</p>
               </li>
-              <li className="px-4 py-2 ">
-                <p className="p-2 rounded-md hover:bg-indigo-300">Results</p>
-              </li>
-              <li className="px-4 py-2 ">
-                <p className="p-2 rounded-md hover:bg-indigo-300">Profiles</p>
-              </li>
+              
             </ul>
           </div>
         </div>
