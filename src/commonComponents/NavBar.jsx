@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     console.log("Toggling Menu");
@@ -23,7 +25,7 @@ const Navbar = () => {
               <li>
                 <span className="cursor-pointer ">Dashboard</span>
               </li>
-              <li>
+              <li onClick={() => navigate('/active') }>
                 <span className="cursor-pointer ">Quizzes</span>
               </li>
               <li>
@@ -82,7 +84,7 @@ const Navbar = () => {
               <li className="px-4 py-2 ">
                 <p className="p-2 rounded-md hover:bg-indigo-300">Dashboard</p>
               </li>
-              <li className="px-4 py-2 ">
+              <li onClick={() => navigate('/active')} className="px-4 py-2 ">
                 <p className="p-2 rounded-md hover:bg-indigo-300">Quizzes</p>
               </li>
               <li className="px-4 py-2 ">
