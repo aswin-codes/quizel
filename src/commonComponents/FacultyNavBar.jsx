@@ -17,13 +17,13 @@ const FacultyNavBar = () => {
             isOpen ? "bg-activebrown" : ""
           }`}
         >
-          <div className="cursor-pointer">
+          <div className="cursor-pointer" onClick={() => navigate('/')}>
             <h1 className="text-2xl text-white font-semibold">QuizWiz</h1>
           </div>
           <div>
             <ul className="hidden lg:flex text-white gap-10 ">
               <li>
-                <span className="cursor-pointer ">Dashboard</span>
+                <span className="cursor-pointer " onClick={() => navigate('/')}>Dashboard</span>
               </li>
               <li onClick={() => navigate('/createquiz') }>
                 <span className="cursor-pointer ">Create Quiz</span>
@@ -82,7 +82,7 @@ const FacultyNavBar = () => {
           <div className={`bg-activebrown   backdrop-opacity-5  `}>
             <ul className="flex-col px-5  text-white gap-10 ">
               <li className="px-4 py-2 ">
-                <p className="p-2 rounded-md hover:bg-indigo-300">Dashboard</p>
+                <p className="p-2 rounded-md hover:bg-indigo-300" onClick={() => navigate('/')}>Dashboard</p>
               </li>
               <li onClick={() => navigate('/createquiz')} className="px-4 py-2 ">
                 <p className="p-2 rounded-md hover:bg-indigo-300">CreateQuiz</p>
